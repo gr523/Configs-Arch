@@ -1,0 +1,12 @@
+#!/bin/bash
+
+systemctl status bluetooth.service | grep running &> /dev/null
+if [ $? -ne 0 ]
+then
+	systemctl start bluetooth.service
+fi
+
+if [ $? -eq 0 ]
+then
+    blueman-manager
+fi

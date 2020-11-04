@@ -1,0 +1,23 @@
+# GIMP action-history
+
+(history-item "select-none" 2)
+(history-item "210-glow-selection" 4)
+(history-item "tools-text" 2)
+(history-item "tools-move" 3)
+(history-item "tools-crop" 0)
+(history-item "vectors-stroke" 0)
+(history-item "layers-alpha-selection-replace" 1)
+(history-item "tools-paintbrush" 0)
+(history-item "layers-new" 0)
+(history-item "tools-vector" 0)
+(history-item "layers-duplicate" 0)
+(history-item "210-glass-selection" 0)
+(history-item "file-export" 1)
+(history-item "image-new" 0)
+(history-item "edit-fill-bg" 0)
+(history-item "tools-perspective" 0)
+(history-item "view-shrink-wrap" 0)
+(history-item "select-all" 0)
+(history-item "layers-delete" 1)
+
+# end of action-history
