@@ -10,6 +10,7 @@
 (monitor-xresolution 101)
 (monitor-yresolution 101)
 (layer-new-name "bar")
+(selection-feather-radius 10)
 (fill-options
     (style solid)
     (antialias yes)

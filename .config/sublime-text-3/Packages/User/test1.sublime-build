@@ -1,30 +1,44 @@
 {
 
-	"cmd": ["bash", "-c", "gcc -g -fsanitize=undefined '${file}' -o '/home/fahim/Codes/X/Program' && gnome-terminal -- bash -c '/home/fahim/Codes/X/Program ; read'"
+	"cmd": ["bash", "-c", "g++ -g -fsanitize=undefined -std=c++17 '${file}' -o '${folder}/X/Program' && gnome-terminal -- bash -c '${folder}/X/Program ; read'"
 			],
 	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-	"working_dir": "/home/fahim/Codes/X",
-	"selector": "source.c",
+	"working_dir": "${folder}/X",
+	"selector": "source.cpp",
 
 	"variants":
 	[
 		
+
 		{
-			"name": "IO_stderr",
-			"shell_cmd": "gcc -g -fsanitize=undefined ${file} -o /home/fahim/Codes/X/Program && /home/fahim/Codes/X/Program < Input.txt &> Output.txt "
+			"name": ">",
+			"shell_cmd": "g++ -g -fsanitize=undefined -std=c++17 ${file} -o Program && ${folder}/X/Program < Input.txt > Output.txt "
 		},
 
 		{
-			"name": "IO_stdout",
-			"shell_cmd": "gcc -g -fsanitize=undefined ${file} -o /home/fahim/Codes/X/Program && /home/fahim/Codes/X/Program < Input.txt > Output.txt "
+			"name": "&>",
+			"shell_cmd": "g++ -g -fsanitize=undefined -std=c++17 ${file} -o ${folder}/X/Program && ${folder}/X/Program < Input.txt &> Output.txt "
+		},
+
+		{
+			"name": ">>",
+			"shell_cmd": "g++ -g -fsanitize=undefined -std=c++17 ${file} -o ${folder}/X/Program && ${folder}/X/Program < Input.txt >> Output.txt "
 		},
 
 		{
 			"name": "terminal",
-			"cmd": ["bash", "-c", "gcc -g -fsanitize=undefined '${file}' -o '/home/fahim/Codes/X/Program' && gnome-terminal -- bash -c '/home/fahim/Codes/X/Program<Input.txt ; read'"
+			"cmd": ["bash", "-c", "g++ -g -fsanitize=undefined -std=c++17 '${file}' -o '${folder}/X/Program' && gnome-terminal -- bash -c '${folder}/X/Program<Input.txt;read'"
+			]
+			
+		},
+
+		{
+			"name": "sfml",
+			"cmd": ["bash", "-c", "g++ -std=c++11 -c '${file}' && g++ main.o -o '${folder}/X/Program' -lsfml-graphics -lsfml-window -lsfml-system && '${folder}/X/Program'"
 			]
 			
 		}
+
 
 	]
 

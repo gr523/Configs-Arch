@@ -1,7 +1,12 @@
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
 image/png=gpicview.desktop;
+image/jpeg=gpicview.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=org.gnome.Evince.desktop;
+application/epub+zip=brave-browser.desktop;org.gnome.Evince.desktop;
+application/vnd.oasis.opendocument.text=org.gnome.Evince.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 image/png=gpicview.desktop
+image/jpeg=gpicview.desktop
