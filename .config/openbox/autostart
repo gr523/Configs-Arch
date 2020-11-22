@@ -1,0 +1,5 @@
+tint2 &
+picom &
+nitrogen --restore &
+xinput float 17
+/usr/bin/lxpolkit
