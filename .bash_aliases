@@ -7,4 +7,3 @@ alias configs='/usr/bin/git --git-dir=$HOME/Configs/configsRepo/ --work-tree=$HO
 alias dt="date +'%a %b%d %Y'"
 alias configsupdater='configs add -u;configs commit -m "`dt`";configs push origin master'
 alias Codesupdater='cd;cd ./Codes;git add .;git commit -m "`dt`";git push origin master'
-wiki="/usr/share/doc/arch-wiki/html/en"

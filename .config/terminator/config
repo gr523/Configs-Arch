@@ -19,7 +19,7 @@
     cursor_shape = ibeam
     cursor_color = "#729fcf"
     cursor_color_fg = False
-    font = Source Code Variable Semi-Bold 18
+    font = Source Code Variable Semi-Bold 17
     foreground_color = "#00ff00"
     show_titlebar = False
     scrollbar_position = hidden
