@@ -1,3 +1,3 @@
 picom &
+alacritty
 sleep 1
-terminator

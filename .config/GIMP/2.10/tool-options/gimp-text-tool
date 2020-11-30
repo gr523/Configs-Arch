@@ -1,8 +1,9 @@
 # GIMP gimp-text-tool options
 
+(foreground (color-rgb 0 0.13725490868091583 0.85490202903747559))
 (palette "Color History")
-(font "C059 Bold")
-(font-size 60)
+(font "QETonyFlores")
+(font-size 56)
 (hint-style slight)
 (box-mode fixed)
 

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx</name>
+    <name>Indigo</name>
     <titleLayout>CSIML</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -183,15 +183,39 @@
     <chainQuitKey>C-g</chainQuitKey>
     <!-- executes -->
 
-    <keybind key="W-d">
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>
+          dmenu_run
+        </command>
+      </action>
+    </keybind>
+
+    <keybind key="W-S-y">
+      <action name="Execute">
+        <command>
+          .config/polybar/launch.sh
+        </command>
+      </action>
+    </keybind>
+
+    <keybind key="Print">
+      <action name="Execute">
+        <command>
+          flameshot gui
+        </command>
+      </action>
+    </keybind>
+
+
+
+    <keybind key="W-v">
       <action name="Execute">
         <command>
           ~/.config/openbox/kshare 0
         </command>
       </action>
     </keybind>
-
-
     <keybind key="W-y">
       <action name="Execute">
         <command>
@@ -199,9 +223,6 @@
         </command>
       </action>
     </keybind>
-
-
-
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>
@@ -223,7 +244,6 @@
         </command>
       </action>
     </keybind>
-
     <keybind key="C-W-equal">
       <action name="Execute">
         <command>
@@ -238,7 +258,6 @@
         </command>
       </action>
     </keybind>
-
     <keybind key="W-q">
       <action name="Execute">
         <command>
@@ -253,7 +272,6 @@
         </command>
       </action>
     </keybind>
-
     <!-- Keybindings for desktop switching -->
     <keybind key="A-1">
       <action name="GoToDesktop">
@@ -290,8 +308,7 @@
         <to>7</to>
       </action>
     </keybind>
-
-<keybind key="W-1">
+    <keybind key="W-1">
       <action name="SendToDesktop">
         <to>1</to>
       </action>
@@ -326,7 +343,6 @@
         <to>7</to>
       </action>
     </keybind>
-
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
@@ -375,8 +391,7 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    
-    <keybind key="W-S-d">
+    <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Tiling Windows -->
@@ -619,13 +634,13 @@
     <keybind key="S-W-b">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="S-W-Return">
+    <keybind key="W-f">
       <action name="ToggleFullscreen"/>
     </keybind>
     <keybind key="A-Down">
       <action name="Iconify"/>
     </keybind>
-    <keybind key="A-Up">
+    <keybind key="W-x">
       <action name="ToggleMaximize"/>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -647,6 +662,7 @@
         </finalactions>
       </action>
     </keybind>
+
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -657,6 +673,7 @@
           <action name="Unshade"/>
         </finalactions>
       </action>
+
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
@@ -664,21 +681,25 @@
         <direction>right</direction>
       </action>
     </keybind>
+
     <keybind key="W-S-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
+
     <keybind key="W-S-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
+
     <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
+
     <!-- Keybindings for launching terminal -->
     <keybind key="W-t">
       <action name="Execute">
@@ -686,15 +707,17 @@
           <enabled>true</enabled>
           <name>terminal</name>
         </startupnotify>
-        <command>terminator</command>
+        <command>alacritty</command>
       </action>
     </keybind>
+
     <!-- Keybindings for running applications -->
     <keybind key="W-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>
       </action>
     </keybind>
+
     <keybind key="W-s">
       <action name="Execute">
         <startupnotify>
@@ -704,6 +727,7 @@
         <command>rofi -show drun</command>
       </action>
     </keybind>
+
     <keybind key="W-S-s">
       <action name="Execute">
         <startupnotify>
@@ -713,12 +737,14 @@
         <command>rofi -show window</command>
       </action>
     </keybind>
+
     <!-- Keybindings for important applications -->
     <keybind key="W-A-b">
       <action name="Execute">
         <command>brave</command>
       </action>
     </keybind>
+
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
@@ -728,48 +754,12 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-<!--     <keybind key="S-W-k">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>xkill</name>
-        </startupnotify>
-        <command>xkill</command>
-      </action>
-    </keybind>
-    <keybind key="W-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>pavucontrol</name>
-        </startupnotify>
-        <command>pavucontrol</command>
-      </action>
-    </keybind>
-    <keybind key="W-l">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>i3lock</name>
-        </startupnotify>
-        <command>i3lock -c 48D884</command>
-      </action>
-    </keybind>
-    <keybind key="S-W-q">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Oblogout</name>
-        </startupnotify>
-        <command>oblogout</command>
-      </action>
-    </keybind>
- -->  
+
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
-    <doubleClickTime>500</doubleClickTime>
+    <doubleClickTime>480</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
     <!-- Time before changing desktops when the pointer touches the edge of the
@@ -786,7 +776,7 @@
       <mousebind button="A-Left" action="Click">
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Left" action="Drag">
+      <mousebind button="W-Left" action="Drag">
         <action name="Move"/>
       </mousebind>
       <mousebind button="A-Right" action="Press">
@@ -794,7 +784,7 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
-      <mousebind button="A-Right" action="Drag">
+      <mousebind button="W-Right" action="Drag">
         <action name="Resize"/>
       </mousebind>
       <mousebind button="A-Middle" action="Press">
@@ -931,7 +921,7 @@
         <action name="Raise"/>
       </mousebind>
       <mousebind button="Middle" action="Press">
-        <action name="Focus"/>
+        <action name="Focus"/>mouse
         <action name="Raise"/>
       </mousebind>
       <mousebind button="Right" action="Press">

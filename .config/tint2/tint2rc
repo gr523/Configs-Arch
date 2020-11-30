@@ -164,7 +164,7 @@ launcher_tooltip = 1
 launcher_item_app = tint2conf.desktop
 launcher_item_app = brave-browser.desktop
 launcher_item_app = sublime_text.desktop
-
+launcher_item_app = Alacritty.desktop
 #-------------------------------------
 # Clock
 time1_format = %l:%M

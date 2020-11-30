@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-length()
+${1:}.length();
 ]]></content>
 <tabTrigger>ln</tabTrigger>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

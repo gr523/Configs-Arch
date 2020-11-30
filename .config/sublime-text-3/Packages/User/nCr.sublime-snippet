@@ -15,7 +15,7 @@ ll nCr(ll n,ll r){
 ]]></content>
 
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<!-- <tabTrigger>hello</tabTrigger> -->
+	<tabTrigger>mod_ncr</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 <scope>source.cpp,source.c++,source.c</scope>
