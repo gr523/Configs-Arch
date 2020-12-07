@@ -4,6 +4,9 @@
 !mimeapps.list
 !.gitignore
 
+!fish
+!fish/**
+
 !nvim
 !nvim/**
 

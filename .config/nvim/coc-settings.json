@@ -1,0 +1,7 @@
+{
+	"suggest":{
+        "noselect": false,
+        "ultisnips.directories":["UltiSnips","$HOME/.config/nvim/UltiSnips"],
+        "snipmate.enable":false
+    }
+}

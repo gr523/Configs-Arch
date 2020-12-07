@@ -9,3 +9,4 @@ alias configsupdater='configs add -u;configs commit -m "`dt`";configs push origi
 alias Codesupdater='cd ~/Codes;git add .;git commit -m "`dt`";git push origin master'
 alias Linkupdater='cd ~/Codes/ClassLinks;git add -u;git commit -m "`dt`";git push origin master'
 alias vconf='nvim ~/.config/nvim/init.vim'
+alias zupdate='lua ~/.config/z.lua/z.lua --init fish > ~/.config/fish/functions/z.fish'
