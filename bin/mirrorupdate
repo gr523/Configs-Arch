@@ -1,0 +1,3 @@
+#!/bin/sh
+
+a=$(reflector --fastest 10 --sort rate --verbose --ipv4 --protocol https,http --country Bangladesh,India,US --connection-timeout 3) && echo "$a" > mirrorlist

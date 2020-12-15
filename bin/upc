@@ -1,0 +1,5 @@
+#!/bin/fish
+
+cd ~/Codes/ClassLinks
+git add -u
+git commit -m ''(dt)'' && git push origin master

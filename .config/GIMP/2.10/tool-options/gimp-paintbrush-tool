@@ -6,6 +6,6 @@
 (gradient "FG to BG (RGB)")
 (palette "Color History")
 (brush-size 51)
-(brush-force 1)
+(brush-force 0.99700000000000022)
 
 # end of gimp-paintbrush-tool options

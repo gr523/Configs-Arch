@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ~/Documents/ArchWiki
+a=$(ls | dmenu -i -l 15)
+[ -z $a ] || brave $a

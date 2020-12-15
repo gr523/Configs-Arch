@@ -1,3 +1,2 @@
-picom &
+sleep 5 &&
 alacritty
-sleep 1
