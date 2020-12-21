@@ -1,3 +1,17 @@
+snippet forv
+for(auto i=${1:arr}.begin();i!=${1:arr}.end();i++){
+}
+endsnippet
+
+
+snippet for
+for(int i=0;i<n;i++){
+	$0
+} 
+endsnippet
+
+
+
 snippet dr4
 int di[]={0,0,1,-1},
 	dj[]={1,-1,0,0};
@@ -6,8 +20,7 @@ endsnippet
 
 
 snippet kfor
-for(int ${1:k};${1:k}<n;${1:k}++){
-	${2:}
+for(int k;k<${1:n};k++){
 }
 endsnippet
 
@@ -43,7 +56,6 @@ int main(){
 #ifdef localhost
 	freopen("Input.txt","r",stdin); freopen("Output.txt","w",stdout);
 #endif
-
 	${1:}
 }
 endsnippet
@@ -146,7 +158,6 @@ endsnippet
 
 snippet forone "For Loop"
 for(int ${2:i}=1;$2<=${1:n};${3:++$2}){
-
 }
 endsnippet
 
@@ -154,7 +165,6 @@ endsnippet
 
 snippet forsimple
 for(auto i:${1:arr}){
-
 }
 endsnippet
 
@@ -178,43 +188,34 @@ endsnippet
 
 
 
-snippet for
-for(int i=0;i<${1:n};i++){
-
-} 
+snippet jsfor
+for(auto i:${1:arr}) 
 endsnippet
 
 
 
-	snippet jsfor
-for(auto i:${1:arr}) 
-	endsnippet
-
-
-
-	snippet mod_kmp
-	void kmp(string &text,string &pattern,int *lps){
-
-		int n=pattern.length(),l=text.length(),i=0,j=0;
-		lps[0]=0;
-		//i-----j//
-		for(j=1;j<n;){
-			if(pattern[i]==pattern[j]) lps[j]=i+1,i++,j++;
-			else {
-				if(i) i=lps[i-1];
-				else lps[j]=0,j++;
-			}
+snippet mod_kmp
+void kmp(string &text,string &pattern,int *lps){
+	int n=pattern.length(),l=text.length(),i=0,j=0;
+	lps[0]=0;
+	//i-----j//
+	for(j=1;j<n;){
+		if(pattern[i]==pattern[j]) lps[j]=i+1,i++,j++;
+		else {
+			if(i) i=lps[i-1];
+			else lps[j]=0,j++;
 		}
-		//j---------i//
-		i=0,j=0;
-		while(i<l){
-			if(pattern[j]==text[i])
-				i++,j++;
-			else {
-				if(j) j=lps[j-1];
-				else i++;
-			}
-			if(j==n){
+	}
+	//j---------i//
+	i=0,j=0;
+	while(i<l){
+		if(pattern[j]==text[i])
+			i++,j++;
+		else {
+			if(j) j=lps[j-1];
+			else i++;
+		}
+		if(j==n){
 				j=lps[j-1];
 			}
 		}
@@ -273,9 +274,8 @@ endsnippet
 
 snippet nest
 for(int i=0;i<n;i++){
-	for(int j=0;j<${2:n};j++){
-
-	}
+    for(int j=0;j<${1:m};j++){
+    }
 }
 endsnippet
 
@@ -355,7 +355,6 @@ endsnippet
 
 snippet rfor
 for(int i=${1:n}-1;i>=0;i--){
-
 }
 endsnippet
 
@@ -421,7 +420,7 @@ endsnippet
 
 
 
-snippet vreversesort
+snippet vrsort
 sort(${1:arr}.rbegin(),${1:arr}.rend());
 endsnippet
 
@@ -601,6 +600,3 @@ struct Bigint {
 	}
 };
 endsnippet
-
-
-

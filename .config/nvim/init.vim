@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'https://github.com/jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/fzf.vim'
-    Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
     Plug 'patstockwell/vim-monokai-tasty'
     Plug 'ThePrimeagen/vim-be-good'
     Plug 'szw/vim-maximizer'
@@ -11,8 +11,16 @@ call plug#end()
 
 let g:codesdir=$HOME . "/Codes/X"
 
+"Colors for nonprogramming or config files
 let ftToIgnore = ['cpp']
-autocmd VimEnter * if index(ftToIgnore, &ft) < 0 | colo gruvbox | call Defaultcolor()
+autocmd VimEnter * if index(ftToIgnore, &ft) < 0  | call Defaultcolor()
+
+colo gruvbox
+hi CursorLineNr guibg=none
+hi VertSplit cterm=none gui=none guibg=none
+hi Search guibg=none guifg=#8d93a1 gui=underline
+hi snipLeadingSpaces guifg=bg
+
 
 autocmd FileType * setlocal formatoptions-=cro
 
@@ -22,7 +30,7 @@ set path+=**
 set shell=/usr/bin/fish
 set mouse=a
 set nu rnu
-set cursorline
+" set cursorline
 set guicursor=
 set termguicolors
 
@@ -31,7 +39,7 @@ set smartcase
 
 set statusline=\ %M\ %r\ %f 
 set statusline+=%=
-set statusline+=\ [%{getcwd()}]\ %l/%L\ %p%%
+set statusline+=\ [%{getcwd()}]\ [%n]\ %p%%
 
 set tabstop=4
 set shiftwidth=4
@@ -55,12 +63,7 @@ vmap <C-c> "+y
 vmap <C-x> <C-c>gvd
 
 let mapleader=','
-" ,, to get in normal mode
-imap <Leader>, <Esc>
-map <Leader>, <Esc>
-cmap <Leader>, <Esc>
-smap <Leader>, <Esc>
-tnoremap <Leader>, <C-\><C-n>
+tnoremap <Leader><Esc> <C-\><C-n>
 
 "move between windows
 map <C-l> <C-w>l
@@ -94,3 +97,7 @@ fu Ftog()
 endfu
 
 map <silent> <A-\> :MaximizerToggle <CR>
+
+
+snoremap ;; <Esc>o
+inoremap ;; <Esc>o

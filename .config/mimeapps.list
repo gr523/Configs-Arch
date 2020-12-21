@@ -1,17 +1,21 @@
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
-image/png=gpicview.desktop;
-image/jpeg=gpicview.desktop;
+image/png=gpicview.desktop;userapp-""sxiv %d""-6IEKV0.desktop;userapp-"sxiv -q"-1X2GV0.desktop;userapp-"sxiv "-VF0SV0.desktop;userapp-"sxiv %"-FU5RV0.desktop;sxiv.desktop;userapp-"sxiv %d"-VHXLV0.desktop;
+image/jpeg=sxiv.desktop;gpicview.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=org.gnome.Evince.desktop;
 application/epub+zip=brave-browser.desktop;org.gnome.Evince.desktop;
 application/vnd.oasis.opendocument.text=org.gnome.Evince.desktop;
-image/svg+xml=gpicview.desktop;
+image/svg+xml=sxiv.desktop;
 text/markdown=nvim.desktop;
+text/plain=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop;nvim.desktop;
+x-scheme-handler/http=exo-web-browser.desktop;
+x-scheme-handler/https=exo-web-browser.desktop;
+application/json=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 image/png=gpicview.desktop
-image/jpeg=gpicview.desktop
+image/jpeg=sxiv.desktop
 image/svg+xml=gpicview.desktop
 text/html=brave-browser.desktop
 x-scheme-handler/http=brave-browser.desktop

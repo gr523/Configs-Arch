@@ -5,3 +5,4 @@ nitrogen --restore &
 xinput float 17 &
 /usr/bin/lxpolkit & 
 xdotool key Alt_L+3 && xdotool key Super_L+b && xdotool key Alt_L+1 
+xmodmap -e 'keycode 108=Escape'

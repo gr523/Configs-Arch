@@ -26,5 +26,3 @@ map <F11> :call CPP(0) <CR><CR>:!xdotool key Super_L+Tab;xdotool key Super_L+Tab
 map <F9>  :call CPP(3) <CR>
 map <F10> :call CPP(4) <CR>
 map <Leader>tc :call CocAction('toggleService', 'clangd')<CR>
-
-colo vim-monokai-tasty

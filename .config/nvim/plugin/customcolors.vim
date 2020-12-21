@@ -11,6 +11,5 @@ fu! Defaultcolor()
     hi StatusLine gui=none guibg=none
     hi StatusLineNC gui=none guibg=none
     hi Normal guibg=none
-    hi snipLeadingSpaces gui=none
 endfu
 
