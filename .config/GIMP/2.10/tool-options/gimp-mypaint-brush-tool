@@ -1,6 +1,6 @@
 # GIMP gimp-mypaint-brush-tool options
 
-(foreground (color-rgb 0 0.01198102596703996 0.017482517482517501))
+(foreground (color-rgb 0.26666668057441711 0.26666668057441711 0.26666668057441711))
 (mybrush "100% Opaque")
 (brush-size 51)
 (brush-hardness 0.5)

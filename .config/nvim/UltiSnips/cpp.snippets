@@ -1,3 +1,10 @@
+snippet dpairs
+#define pl pair<ll,ll>
+#define ff first
+#define ss second
+endsnippet
+
+
 snippet forv
 for(auto i=${1:arr}.begin();i!=${1:arr}.end();i++){
 }
@@ -399,7 +406,7 @@ endsnippet
 snippet T--
 int t,T=1;cin>>t;
 while(t--){
-	${1:}
+	$0
 }
 endsnippet
 
@@ -599,4 +606,76 @@ struct Bigint {
 		return a/gcd(a,b);
 	}
 };
+endsnippet
+
+
+snippet i128_cpp
+#include <bits/stdc++.h>
+#define ll long long 
+using namespace std;
+__int128 read();
+void print(__int128);
+
+
+int main(){
+    $0
+}
+
+
+
+
+
+
+
+__int128 read() {
+    __int128 x = 0, f = 1;
+    char ch = cin.get();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') f = -1;
+        ch = cin.get();
+    }
+    while (ch >= '0' && ch <= '9') {
+        x = x * 10 + ch - '0';
+        ch = cin.get();
+    }
+    return x * f;
+}
+
+void print(__int128 x) {
+    if (x < 0) {
+        cout<<'-';
+        x = -x;
+    }
+    if (x > 9) print(x / 10);
+    char r=x%10+'0';
+    cout<<r;
+}
+endsnippet
+
+
+
+snippet i128
+__int128 read() {
+    __int128 x = 0, f = 1;
+    char ch = cin.get();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') f = -1;
+        ch = cin.get();
+    }
+    while (ch >= '0' && ch <= '9') {
+        x = x * 10 + ch - '0';
+        ch = cin.get();
+    }
+    return x * f;
+}
+
+void print(__int128 x) {
+    if (x < 0) {
+        cout<<'-';
+        x = -x;
+    }
+    if (x > 9) print(x / 10);
+    char r=x%10+'0';
+    cout<<r;
+}
 endsnippet

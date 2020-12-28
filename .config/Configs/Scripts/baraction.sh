@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mem() {
-  mem=`free -h | awk '/Mem/ {printf "%s",$3}'`
+  mem=`free -h| awk '/Mem/ {printf "%s",$3}'`
   echo -e "+@fg=1;${mem/i}"
 }
 

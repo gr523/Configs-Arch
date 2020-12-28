@@ -14,6 +14,8 @@
 (icon-theme "Color")
 (icon-size medium)
 (image-convert-indexed-max-colors 255)
+(layer-new-name "pic")
+(selection-grow-radius 2)
 (fill-options
     (style solid)
     (antialias yes)
