@@ -24,7 +24,7 @@ function fzf_key_bindings
     # "-path \$dir'*/\\.*'" matches hidden files/folders inside $dir but not
     # $dir itself, even if hidden.
     test -n "$FZF_CTRL_T_COMMAND"; or set -l FZF_CTRL_T_COMMAND "
-    command fd -t f -i -LH -E "dev" $dir 2> /dev/null | sed 's@^\./@@'"
+    command fd --ignore-file ~/.fdignore -t f -i -LHI $dir 2> /dev/null | sed 's@^\./@@'"
 # -o -type d -print \
 
     test -n "$FZF_TMUX_HEIGHT"; or set FZF_TMUX_HEIGHT 40%
@@ -74,7 +74,7 @@ function fzf_key_bindings
     set -l fzf_query $commandline[2]
 
     test -n "$FZF_ALT_C_COMMAND"; or set -l FZF_ALT_C_COMMAND "
-    command fd -t d -HL -E "dev" 2> /dev/null | sed 's@^\./@@'"
+    command fd --ignore-file ~/.fdignore -i -t d -HLI  2> /dev/null | sed 's@^\./@@'"
     test -n "$FZF_TMUX_HEIGHT"; or set FZF_TMUX_HEIGHT 40%
     begin
       set -lx FZF_DEFAULT_OPTS "--height $FZF_TMUX_HEIGHT --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS"

@@ -119,7 +119,7 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Opera">
+  <item label="Firefox">
     <action name="Execute">
       <command>opera</command>
       <startupnotify>
@@ -244,7 +244,7 @@
   </item>
   <item label="Totem">
     <action name="Execute">
-      <command>totem</command>
+        <command>~/Configs/ServiceFiles/maron</command>
       <startupnotify>
         <enabled>yes</enabled>
       </startupnotify>

@@ -4,3 +4,4 @@ go
 .cache
 .git
 dev
+*fs

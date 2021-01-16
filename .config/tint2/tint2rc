@@ -163,11 +163,11 @@ startup_notifications = 1
 launcher_tooltip = 1
 launcher_item_app = tint2conf.desktop
 launcher_item_app = brave-browser.desktop
-launcher_item_app = sublime_text.desktop
+# launcher_item_app = sublime_text.desktop
 launcher_item_app = Alacritty.desktop
 #-------------------------------------
 # Clock
-time1_format = %l:%M
+time1_format = %l:%M:%S
 time2_format = %A %d %B
 time1_timezone = 
 time2_timezone = 

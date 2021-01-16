@@ -1,5 +1,8 @@
 tint2 &
+xmodmap -e 'keycode 108=Escape' &
+volumeicon &
+nm-applet &
 picom &
 nitrogen --restore &
 xinput float 17
-/usr/bin/lxpolkit
+/usr/bin/lxpolkit &

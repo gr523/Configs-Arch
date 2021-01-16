@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-[ "$1" = "0" ] && killall onboard & killall firefox & killall pcmanfm & killall evince & killall easystroke & killall flameshot
-[ "$1" = "1" ] && (onboard & easystroke enable & nm-applet)
+[ "$1" = "0" ] && ( (killall onboard & killall firefox-bin & killall pcmanfm & killall evince & killall flameshot & killall alacritty); killall polybar;killall easystroke )
+[ "$1" = "1" ] && (onboard & ~/.config/Configs/Scripts/taskete 1)

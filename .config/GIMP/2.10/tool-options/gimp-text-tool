@@ -1,10 +1,10 @@
 # GIMP gimp-text-tool options
 
-(foreground (color-rgb 0.26666668057441711 0.26666668057441711 0.26666668057441711))
+(foreground (color-rgb 0.0078431377187371254 0.090196080505847931 0.086274512112140656))
 (palette "Color History")
-(font "QETonyFlores")
-(font-size 40)
+(font "Sans-serif")
+(font-size 38)
 (hint-style slight)
-(box-mode fixed)
+(justify center)
 
 # end of gimp-text-tool options

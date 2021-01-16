@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>7</number>
+    <number>6</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>~</name>
@@ -180,8 +180,34 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <chainQuitKey>C-g</chainQuitKey>
-    <!-- executes -->
+      <keybind key="W-S-m">
+          <action name="Execute">
+              <command>
+                  ~/.config/Configs/Scripts/mictoogle.sh
+              </command>
+          </action>
+      </keybind>
+      <keybind key="W-z">
+          <action name="Execute">
+              <command>
+                  sh -c "nmcli c down Ethernet"
+              </command>
+          </action>
+      </keybind>
+      <keybind key="W-w">
+          <action name="Execute">
+              <command>
+                  ~/.config/openbox/disconnect
+              </command>
+          </action>
+      </keybind>
+      <keybind key="W-p">
+          <action name="Execute">
+              <command>
+                  ~/.config/openbox/connect
+              </command>
+          </action>
+      </keybind>
 
     <keybind key="W-Return">
       <action name="Execute">
@@ -190,15 +216,13 @@
         </command>
       </action>
     </keybind>
-
     <keybind key="W-S-y">
       <action name="Execute">
         <command>
-          .config/polybar/launch.sh
+            ~/.config/polybar/launch.sh
         </command>
       </action>
     </keybind>
-
     <keybind key="Print">
       <action name="Execute">
         <command>
@@ -206,13 +230,17 @@
         </command>
       </action>
     </keybind>
-
-
-
+    <keybind key="W-g">
+        <action name="Execute">
+            <command>
+                ~/.config/Configs/Scripts/taskete 0
+            </command>
+        </action>
+    </keybind>
     <keybind key="W-v">
-      <action name="Execute">
-        <command>
-          ~/.config/openbox/kshare 0
+        <action name="Execute">
+            <command>
+                ~/.config/openbox/kshare 0
         </command>
       </action>
     </keybind>
@@ -614,9 +642,6 @@
     <keybind key="A-r">
       <action name="Resize"/>
     </keybind>
-    <keybind key="A-m">
-      <action name="Move"/>
-    </keybind>
     <!-- Keybindings for windows -->
     <keybind key="W-c">
       <action name="Close"/>
@@ -662,7 +687,6 @@
         </finalactions>
       </action>
     </keybind>
-
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -673,7 +697,6 @@
           <action name="Unshade"/>
         </finalactions>
       </action>
-
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
@@ -681,25 +704,21 @@
         <direction>right</direction>
       </action>
     </keybind>
-
     <keybind key="W-S-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-
     <keybind key="W-S-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-
     <keybind key="W-S-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
-
     <!-- Keybindings for launching terminal -->
     <keybind key="W-t">
       <action name="Execute">
@@ -710,14 +729,12 @@
         <command>alacritty</command>
       </action>
     </keybind>
-
     <!-- Keybindings for running applications -->
     <keybind key="W-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>
       </action>
     </keybind>
-
     <keybind key="W-s">
       <action name="Execute">
         <startupnotify>
@@ -727,7 +744,6 @@
         <command>rofi -show drun</command>
       </action>
     </keybind>
-
     <keybind key="W-S-s">
       <action name="Execute">
         <startupnotify>
@@ -737,14 +753,12 @@
         <command>rofi -show window</command>
       </action>
     </keybind>
-
     <!-- Keybindings for important applications -->
     <keybind key="W-A-b">
       <action name="Execute">
         <command>brave</command>
       </action>
     </keybind>
-
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
@@ -754,7 +768,6 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -920,10 +933,8 @@
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
-      <mousebind button="Middle" action="Press">
-        <action name="Focus"/>mouse
-        <action name="Raise"/>
-      </mousebind>
+      <mousebind button="Middle" action="Press"><action name="Focus"/>mouse
+        <action name="Raise"/></mousebind>
       <mousebind button="Right" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>

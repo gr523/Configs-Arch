@@ -26,6 +26,8 @@ autocmd FileType * setlocal formatoptions-=cro
 
 set wildmenu
 set path+=**
+set hidden
+set scrolloff=8
 
 set shell=/usr/bin/fish
 set mouse=a
@@ -44,6 +46,7 @@ set statusline+=\ [%{getcwd()}]\ [%n]\ %p%%
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
 
 set splitbelow splitright
 set noequalalways

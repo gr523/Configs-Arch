@@ -14,8 +14,7 @@
 (icon-theme "Color")
 (icon-size medium)
 (image-convert-indexed-max-colors 255)
-(layer-new-name "pic")
-(selection-grow-radius 2)
+(layer-new-name "ff")
 (fill-options
     (style solid)
     (antialias yes)
@@ -26,7 +25,7 @@
     (antialias yes)
     (feather no)
     (feather-radius 10)
-    (method line)
+    (method paint-method)
     (width 6)
     (unit pixels)
     (cap-style butt)

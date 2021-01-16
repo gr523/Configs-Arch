@@ -10,7 +10,6 @@ for f in ~/.config/fish/functions/custom/*
   source $f
 end
 
-source ~/.bash_aliases
 
 function bind_bang
     switch (commandline -t)[-1]

@@ -6,6 +6,9 @@ SETUVAR _fish_abbr_Pqi:pacman\x20\x2dQi
 SETUVAR _fish_abbr_Pr:sudo\x20pacman\x20\x2dRns
 SETUVAR _fish_abbr_Ps:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_Psy:sudo\x20pacman\x20\x2dSyyu\x20\x2d\x2dignore\x20reflector
+SETUVAR _fish_abbr_dt:date\x20\x27\x2b\x25a\x20\x25b\x25d\x20\x25Y\x27
+SETUVAR _fish_abbr_upc:cd\x20\x7e/Codes/ClassLinks\x3bgit\x20add\x20\x2e\x3bgit\x20commit\x20\x2dm\x20\x28dt\x29\x3bgit\x20push\x20origin\x20master
+SETUVAR _fish_abbr_vconf:vi\x20/home/fahim/\x2econfig/nvim/init\x2evim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7

@@ -1,6 +1,6 @@
 /home/fahim/.config/nvim|24|1608037359
 /usr/share/applications|24|1608504209
-/home/fahim/Codes|64|1609147641
+/home/fahim/Codes|69|1609519249
 /home/fahim/Class|2|1606931868
 /home/fahim/.config/fish|33|1609176331
 /home/fahim/Apps|2|1607376216
@@ -18,7 +18,7 @@
 /bin|33|1607624950
 /home/fahim/.config/Configs/prompt_scripts|28|1607625399
 /home/fahim/Test|14|1607698915
-/home/fahim/Codes/X|6|1607694146
+/home/fahim/Codes/X|8|1609514167
 /home/fahim/AppImages|2|1607707951
 /home/fahim/.config/nvim/plugged|2|1607800827
 /home/fahim/.config/nvim/plugged/vim-maximizer|2|1607800833
@@ -42,7 +42,15 @@
 /home/fahim/Songs/BlackClover|21|1608401135
 /home/fahim/Songs/BlackClover/ED|6|1608400820
 /home/fahim/.config/fish/conf.d|2|1608544872
-/home/fahim/Codes/Slider-SFML|15|1608656274
 /home/fahim/build|8|1608841671
-/home/fahim/Codes/the-right-angle|96|1609179342
 /home/fahim/.config/fish/functions/custom|4|1609176385
+/home/fahim/Codes/The_Right_Angle|273|1609529544
+/home/fahim/Configs|1|1609242314
+/usr|2|1609242390
+/usr/lib|3|1609242471
+/usr/share|2|1609242482
+/usr/share/SFML|2|1609242517
+/usr/share/SFML/doc|3|1609242587
+/usr/share/SFML/doc/html|3|1609242569
+/usr/share/SFML/examples|2|1609242592
+/usr/share/SFML/examples/window|3|1609242720
