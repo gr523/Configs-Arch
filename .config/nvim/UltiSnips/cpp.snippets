@@ -1,3 +1,14 @@
+snippet dr8
+int di[8]={0,0,1,-1,1,-1,1,-1},
+    dj[8]={1,-1,0,0,1,-1,-1,1};
+endsnippet
+
+
+snippet map
+map<${1:key}, ${2:value}> ${0:mp};
+endsnippet
+
+
 snippet dpairs
 #define pl pair<ll,ll>
 #define ff first
@@ -202,31 +213,33 @@ endsnippet
 
 
 snippet mod_kmp
-void kmp(string &text,string &pattern,int *lps){
-	int n=pattern.length(),l=text.length(),i=0,j=0;
-	lps[0]=0;
-	//i-----j//
-	for(j=1;j<n;){
-		if(pattern[i]==pattern[j]) lps[j]=i+1,i++,j++;
-		else {
-			if(i) i=lps[i-1];
-			else lps[j]=0,j++;
-		}
-	}
-	//j---------i//
-	i=0,j=0;
-	while(i<l){
-		if(pattern[j]==text[i])
-			i++,j++;
-		else {
-			if(j) j=lps[j-1];
-			else i++;
-		}
-		if(j==n){
-				j=lps[j-1];
-			}
-		}
-	}
+void kmp(string &text,string &pattern){
+    int n=pattern.length(),l=text.length(),lps[n],i,j,match=0;
+    lps[0]=0;
+    //j-----i//
+    for(i=1,j=0;i<n;){
+        if(pattern[j]==pattern[i]) lps[i]=j+1,i++,j++;
+        else {
+            if(j) j=lps[j-1];
+            else lps[i]=0,i++;
+        }
+    }
+    //j---------i//
+    i=0,j=0;
+    while(i<l){
+        if(text[i]=='?') text[i]=pattern[j];
+        if(pattern[j]==text[i])
+            i++,j++;
+        else {
+            if(j) j=lps[j-1];
+            else i++;
+        }
+        if(j==n){
+            j=lps[j-1];
+            match++;
+        }
+    }
+}
 endsnippet
 
 
@@ -677,5 +690,66 @@ void print(__int128 x) {
     if (x > 9) print(x / 10);
     char r=x%10+'0';
     cout<<r;
+}
+endsnippet
+
+
+
+snippet mod_sieve
+const int mx=(int)1e6;
+bool isprime[mx+1]; 
+int primes[78600],primeno=0; //78600 for 1e6,664700 for 1e7,6303400 for 1e7+1e8
+
+void sieve(){
+    memset(isprime,1,sizeof(isprime));
+    int n=sqrt(mx)+1;
+    isprime[0]=isprime[1]=0;
+    for(int i=2;i<=n;i++){
+        if(isprime[i])
+            for(int j=i*i;j<=mx;j+=i)
+                isprime[j]=0;        
+    }
+    for(int i=2;i<=mx;i++) if(isprime[i]) primes[primeno++]=i; 
+}
+endsnippet
+
+
+snippet mod_djikstra
+const int mx=100000;
+
+vector<pl>*adj; 
+
+int d[mx];
+
+void djikstra(int start,int n){
+    for(int i=0;i<=n;i++) d[i]=1e9;
+    priority_queue<pl,vector<pl>,greater<pl>>q;
+    q.push({0,start});
+    d[start]=0;
+    pl u,v;
+    while(!q.empty()){
+        u=q.top();
+        q.pop();
+        for(int i=0;i<adj[u.second].size();++i){
+            v=adj[u.second][i];                //adj[u][i]={cost,node}
+            if(d[u.second]+v.first<d[v.second]){
+                d[v.second]=d[u.second]+v.first;  
+                q.push(v);
+            }
+        }
+    }
+}
+endsnippet
+
+
+snippet grid_dfs
+void dfs(int px,int py){
+    vis[px][py]=1;
+    for(int i=0;i<4;i++){
+        x=px+di[i],y=py+dj[i];
+        if(x>=n || x<0 || y>=m || y<0 || vis[x][y] || grid[x][y]==${1:'#'})
+            continue;
+        dfs(x,y);
+    } 
 }
 endsnippet

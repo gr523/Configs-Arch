@@ -12,7 +12,7 @@ call plug#end()
 let g:codesdir=$HOME . "/Codes/X"
 
 "Colors for nonprogramming or config files
-let ftToIgnore = ['cpp']
+let ftToIgnore = ['cpp', 'python']
 autocmd VimEnter * if index(ftToIgnore, &ft) < 0  | call Defaultcolor()
 
 colo gruvbox
@@ -104,3 +104,5 @@ map <silent> <A-\> :MaximizerToggle <CR>
 
 snoremap ;; <Esc>o
 inoremap ;; <Esc>o
+
+map <silent> <F5> :exe "set ft=".&ft <CR>

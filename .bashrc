@@ -1,10 +1,10 @@
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
-export PATH=$PATH:~/bin/
 export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
    vi -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+export PATH=$PATH:$HOME/bin
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples

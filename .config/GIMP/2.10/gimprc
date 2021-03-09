@@ -14,7 +14,7 @@
 (icon-theme "Color")
 (icon-size medium)
 (image-convert-indexed-max-colors 255)
-(layer-new-name "ff")
+(layer-new-name "last")
 (fill-options
     (style solid)
     (antialias yes)

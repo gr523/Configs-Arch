@@ -180,6 +180,13 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
+      <keybind key="W-k">
+          <action name="Execute">
+              <command>
+                  killall brave
+              </command>
+          </action>
+      </keybind>
       <keybind key="W-S-m">
           <action name="Execute">
               <command>

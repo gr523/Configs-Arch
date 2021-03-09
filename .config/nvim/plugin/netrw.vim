@@ -29,7 +29,6 @@ endfunction
 
 function! NetrwMappings()
 		" Hack fix to make ctrl-l work properly
-		noremap <buffer> <A-l> <C-w>l
 		noremap <buffer> <C-l> <C-w>l
 		noremap <silent> <A-f> :call ToggleNetrw()<CR>
 		noremap <buffer> V :call OpenToRight()<cr>
