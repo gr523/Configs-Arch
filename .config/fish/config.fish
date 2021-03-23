@@ -1,14 +1,10 @@
 set fish_greeting
 set _ZL_MATCH_MODE 1
 set PATH $PATH:$HOME/bin
-set -x PAGER "/bin/sh -c \"unset PAGER;col -b -x | \
+set -x MANPAGER "/bin/sh -c \"unset PAGER;col -b -x | \
     vi -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
-
-for f in ~/.config/fish/functions/custom/*
-  source $f
-end
 
 
 function bind_bang

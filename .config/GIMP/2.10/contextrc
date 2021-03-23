@@ -1,8 +1,8 @@
 # GIMP user context
 
-(tool "gimp-unified-transform-tool")
-(paint-info "gimp-paintbrush")
-(foreground (color-rgb 0.97254901960784312 0.92549019607843142 0.92549019607843142))
+(tool "gimp-smudge-tool")
+(paint-info "gimp-smudge")
+(foreground (color-rgb 0.010489510489510523 0.0098559158961843835 0.0098559158961843835))
 (background (color-rgb 0.72549021244049072 0.86666673421859741 0.88627457618713379))
 (brush "2. Hardness 100")
 (dynamics "Dynamics Off")

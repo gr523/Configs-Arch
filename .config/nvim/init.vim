@@ -106,3 +106,5 @@ snoremap ;; <Esc>o
 inoremap ;; <Esc>o
 
 map <silent> <F5> :exe "set ft=".&ft <CR>
+
+map<silent> <Leader>ii gg=G<C-o>

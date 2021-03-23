@@ -6,6 +6,7 @@ SETUVAR _fish_abbr_Pqi:pacman\x20\x2dQi
 SETUVAR _fish_abbr_Pr:sudo\x20pacman\x20\x2dRns
 SETUVAR _fish_abbr_Ps:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_Psy:sudo\x20pacman\x20\x2dSyyu
+SETUVAR _fish_abbr_fi:flatpak\x20install\x20\x2d\x2duser\x20flathub
 SETUVAR _fish_abbr_ramclean:sudo\x20sh\x20\x2dc\x20\x22echo\x203\x20\x3e\x20/proc/sys/vm/drop_caches\x22
 SETUVAR _fish_abbr_upc:cd\x20\x7e/Codes/ClassLinks\x3bgit\x20add\x20\x2e\x3bgit\x20commit\x20\x2dm\x20\x28dt\x29\x3bgit\x20push\x20origin\x20master
 SETUVAR _fish_abbr_vconf:vi\x20/home/fahim/\x2econfig/nvim/init\x2evim
