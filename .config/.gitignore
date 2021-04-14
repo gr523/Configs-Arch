@@ -25,7 +25,7 @@
 !ibus
 !ibus/**
 
-!GIMP
+!GIMP/
 !GIMP/**
 
 !lxsession-default-apps
@@ -48,9 +48,6 @@
 
 !tint2
 !tint2/**
-
-!geany
-!geany/**
 
 !bleachbit
 !bleachbit/**

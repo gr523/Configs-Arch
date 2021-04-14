@@ -1,24 +1,24 @@
-#!/bin/bash
+#!/bin/dash
 
 mem() {
-  mem=`free -h| awk '/Mem/ {printf "%s",$3}'`
-  echo -e "+@fg=1;${mem/i}"
+  mem=`free -h| awk '/Mem/ {printf "%s",$3}' | sed 's/i//'`
+  echo "+@fg=1;${mem}"
 }
 
 vol() {
     vol=`pamixer --get-volume-human`
-    echo -e "+@fn=4;+@fg=5;+@fg=2;+@fn=0; $vol"
+    echo  "+@fn=4;+@fg=5;+@fg=2;+@fn=0; $vol"
 }
 
 battery(){
-  bat=`cat cat /sys/class/power_supply/BAT0/capacity`
-  echo -e "+@fg=3;+@fn=3; +@fn=0; $bat%"
+  bat=`cat /sys/class/power_supply/BAT0/capacity`
+  echo  "+@fg=3;+@fn=3; +@fn=0; $bat%"
 }
 
 brightness(){
    bright=`light -G`
    bright=${bright%.*}
-   echo -e "+@fg=4;+@fn=3; +@fn=0;$bright%"
+   echo  "+@fg=4;+@fn=3; +@fn=0;$bright%"
 }
 
 SLEEP_SEC=3
@@ -41,5 +41,5 @@ done
 #   read cpu a b c idle rest < /proc/stat
 #   total=$((a+b+c+idle))
 #   cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
-#   echo -e "CPU: $cpu%"
+#   echo  "CPU: $cpu%"
 # }

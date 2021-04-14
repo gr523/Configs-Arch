@@ -18,12 +18,17 @@ fu! CPP(...)
 endfu
 
 fu UpdateInput()
-    exe "silent ! sh -c 'echo \"$(xclip -o -sel clip)\" > '" . g:codesdir . "/Input.txt"
+    exe "silent !xclip -o -sel clip > " . g:codesdir . "/Input.txt"
 endfu
 
 fu CopyOutput()
-    exe "silent ! xclip -sel clip" . g:codesdir . "/Output.txt"
+    exe "silent !xclip -sel clip " . g:codesdir . "/Output.txt"
 endfu
+
+" fu ModCocConfig(key,value)
+"     :call coc#config(key,value)
+"     :CocRestart
+" endfu
 
 "IO
 imap <F12> <Esc> :call CPP(0) <CR>
@@ -32,16 +37,17 @@ map <F12> :call CPP(0) <CR>
 imap <F11> <Esc> :call CPP() <CR>
 map <F11> :call CPP() <CR>
 "Input only
-imap <F10> <Esc> :call CPP(2) <CR>
-map <F10> :call CPP(2) <CR>
+imap <F9> <Esc> :call CPP(2) <CR>
+map <F9> :call CPP(2) <CR>
 "Input+terminal
 imap <F10> <Esc> :call CPP(1) <CR>
 map <F10> :call CPP(1) <CR>
 "Input+Append
-imap <F9> <Esc> :call CPP(3) <CR>
-map <F9> :call CPP(3) <CR>
+imap <F7> <Esc> :call CPP(3) <CR>
+map <F7> :call CPP(3) <CR>
 
 map<silent><F4> :call UpdateInput() <CR>
 map<silent><F3> :call CopyOutput() <CR>
 
-map <Leader>tc :call CocAction('toggleService', 'clangd')<CR>
+map <silent><Leader>tc :call CocAction('toggleService', 'clangd')<CR>
+map <silent><Leader>td :call CocAction('diagnosticToggle', 'clangd')<CR>

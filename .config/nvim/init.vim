@@ -29,7 +29,7 @@ set path+=**
 set hidden
 set scrolloff=8
 
-set shell=/usr/bin/fish
+" set shell=/usr/bin/fish
 set mouse=a
 set nu rnu
 " set cursorline
@@ -103,7 +103,6 @@ map <silent> <A-\> :MaximizerToggle <CR>
 
 
 snoremap ;; <Esc>o
-inoremap ;; <Esc>o
 
 map <silent> <F5> :exe "set ft=".&ft <CR>
 
