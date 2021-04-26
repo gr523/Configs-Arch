@@ -29,3 +29,11 @@ pamixer
 xdotool
 procs
 nethogs
+bat
+fd
+fzf
+fish
+gpicview
+xorg-xev
+xorg-xinput
+xorg-xmodmap

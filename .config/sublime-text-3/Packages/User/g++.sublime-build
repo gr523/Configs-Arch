@@ -30,20 +30,6 @@
 			"cmd": ["bash", "-c", "g++ -g -fsanitize=undefined -std=c++17 '${file}' -o '${folder}/X/Program' && gnome-terminal -- bash -c '${folder}/X/Program<Input.txt;read'"
 			]
 			
-		},
-
-		{
-			"name": "sfml",
-			"cmd": ["bash", "-c", "g++ -std=c++11 -c '${file}' && g++ main.o -o '${folder}/X/Program' -lsfml-graphics -lsfml-window -lsfml-system && '${folder}/X/Program'"
-			]
-			
-		},
-
-		{
-			"name": "sfml_testing",
-			"cmd": ["bash", "-c", "g++ -std=c++11 '${file}' -o '${folder}/X/Program' && '${folder}/X/Program'>Output.txt"
-			]
-			
 		}
 
 	]

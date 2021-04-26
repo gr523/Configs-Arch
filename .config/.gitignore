@@ -7,6 +7,9 @@
 !fish
 !fish/**
 
+!zsh
+!zsh/**
+
 !nvim
 !nvim/**
 
@@ -30,9 +33,6 @@
 
 !lxsession-default-apps
 !lxsession-default-apps/**
-
-!pulse
-!pulse/**
 
 !pcmanfm
 !pcmanfm/**

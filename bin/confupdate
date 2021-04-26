@@ -1,4 +1,0 @@
-#!/bin/fish
-
-configs add -u
-configs commit -m ''(dt)'' && configs push origin master

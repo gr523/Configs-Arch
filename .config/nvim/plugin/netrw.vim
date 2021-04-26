@@ -30,10 +30,10 @@ endfunction
 function! NetrwMappings()
 		" Hack fix to make ctrl-l work properly
 		noremap <buffer> <C-l> <C-w>l
-		noremap <silent> <A-f> :call ToggleNetrw()<CR>
-		noremap <buffer> V :call OpenToRight()<cr>
-		noremap <buffer> H :call OpenBelow()<cr>
-		noremap <buffer> T :call OpenTab()<cr>
+		noremap <silent> <A-S-e> :call ToggleNetrw()<CR>
+		noremap <buffer> <A-S-v> :call OpenToRight()<cr>
+		noremap <buffer> <A-S-h> :call OpenBelow()<cr>
+		noremap <buffer> <A-S-t> :call OpenTab()<cr>
 endfunction
 
 augroup netrw_mappings
@@ -76,5 +76,5 @@ augroup ProjectDrawer
 	autocmd VimEnter ~/.config/joplin/tmp/*,/tmp/calcurse*,~/.calcurse/notes/*,~/vimwiki/*,*/.git/COMMIT_EDITMSG let b:noNetrw=1
 	autocmd VimEnter * :call NetrwOnBufferOpen()
 augroup END
-
+ 
 let g:NetrwIsOpen=1

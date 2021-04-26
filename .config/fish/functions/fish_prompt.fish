@@ -35,7 +35,7 @@
 #     set -g theme_display_virtualenv no
 #     set -g theme_display_nix no
 #     set -g theme_display_ruby no
-#     set -g theme_display_user ssh
+    set -g theme_display_user ssh
 #     set -g theme_display_hostname ssh
 #     set -g theme_display_sudo_user yes
 #     set -g theme_display_vi no
@@ -46,13 +46,11 @@
 #     set theme_show_exit_status no
 #     set -g theme_display_jobs_verbose yes
 #     set -g default_user your_normal_user
-#     set -g theme_color_scheme dark
+    set -g theme_color_scheme dark
 #     set -g fish_prompt_pwd_dir_length 0
 #     set -g theme_project_dir_length 1
 #     set -g theme_title_use_abbreviated_path no
     set -g fish_prompt_pwd_dir_length 0
-    set -g theme_display_user yes
-    set -g theme_color_scheme dark
     set -g theme_newline_cursor yes
 
 

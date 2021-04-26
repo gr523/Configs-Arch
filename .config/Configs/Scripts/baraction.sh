@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 mem() {
   mem=`free -h| awk '/Mem/ {printf "%s",$3}' | sed 's/i//'`

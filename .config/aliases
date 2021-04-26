@@ -1,8 +1,7 @@
-alias bat='bat --pager "less"'
-alias ll='ls -alF'
+alias ls='ls -h --color'
+alias ll='ls -alh'
 alias la='ls -A'
-alias l='ls -CF'
-alias grubupdate='sudo mount /dev/sda3 /os1;sudo mount /dev/sda1 /os2;sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias lh='ls -a | grep "^\." | xargs ls -l'
 alias ramclean='sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"'
 alias configs='/usr/bin/git --git-dir=$HOME/Configs/configsRepo/ --work-tree=$HOME'
 alias dt="date +'%a %b%d %Y'"
@@ -10,4 +9,5 @@ alias configsupdater='configs add -u;configs commit -m "`dt`";configs push origi
 alias Codesupdater='cd ~/Codes;git add .;git commit -m "`dt`";git push origin master'
 alias Linkupdater='cd ~/Codes/ClassLinks;git add -u;git commit -m "`dt`";git push origin master'
 alias vconf='nvim ~/.config/nvim/init.vim'
-alias zupdate='lua ~/.config/z.lua/z.lua --init fish > ~/.config/fish/functions/z.fish'
+# alias zupdate='lua ~/.config/z.lua/z.lua --init fish > ~/.config/fish/functions/z.fish'
+alias vman="vi -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' -c 'map <SPACE> <C-D>' -c 'map b <C-U>' -c 'nmap K :Man <C-R>=expand(\"<cword>\")<CR><CR>' -"

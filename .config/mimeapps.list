@@ -1,25 +1,22 @@
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
-image/png=brave-browser.desktop;gpicview.desktop;userapp-""sxiv %d""-6IEKV0.desktop;userapp-"sxiv -q"-1X2GV0.desktop;userapp-"sxiv "-VF0SV0.desktop;userapp-"sxiv %"-FU5RV0.desktop;sxiv.desktop;userapp-"sxiv %d"-VHXLV0.desktop;
-image/jpeg=sxiv.desktop;gpicview.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=appimagekit_e8e70342297c41f88c5ad706f5449068-LibreOffice.desktop;org.gnome.Evince.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice.desktop;org.gnome.Evince.desktop;
 application/epub+zip=brave-browser.desktop;org.gnome.Evince.desktop;
 application/vnd.oasis.opendocument.text=org.gnome.Evince.desktop;
-image/svg+xml=sxiv.desktop;
 text/markdown=nvim.desktop;
-x-scheme-handler/http=exo-web-browser.desktop;
-x-scheme-handler/https=exo-web-browser.desktop;
-application/json=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop;
 application/x-ms-dos-executable=sublime_text.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=appimagekit_e8e70342297c41f88c5ad706f5449068-LibreOffice.desktop;
 application/vnd.ms-powerpoint=appimagekit_e8e70342297c41f88c5ad706f5449068-LibreOffice.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=appimagekit_e8e70342297c41f88c5ad706f5449068-LibreOffice.desktop;
 image/gif=brave-browser.desktop;
+application/octet-stream=nvim.desktop;
+application/vnd.apple.keynote=neovim.desktop;nvim.desktop;
+application/json=brave-browser.desktop;
 
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 image/png=gpicview.desktop
-image/jpeg=sxiv.desktop
+image/jpeg=gpicview.desktop
 image/svg+xml=gpicview.desktop
 text/html=brave-browser.desktop
 x-scheme-handler/http=brave-browser.desktop
@@ -27,4 +24,5 @@ x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
 inode/directory=pcmanfm.desktop
-text/plain=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop;nvim.desktop;
+text/plain=nvim.desktop;
+x-scheme-handler/mailspring=mailspring.desktop

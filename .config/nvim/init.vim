@@ -4,7 +4,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'gruvbox-community/gruvbox'
     Plug 'patstockwell/vim-monokai-tasty'
-    Plug 'ThePrimeagen/vim-be-good'
     Plug 'szw/vim-maximizer'
 "     Plug 'puremourning/vimspector'
 call plug#end()
