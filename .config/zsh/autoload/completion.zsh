@@ -1,9 +1,8 @@
 # The following lines were added by compinstall
 
-zstyle :compinstall filename '/home/fahim/.config/zsh/.zshrc'
+zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 
 zstyle ':completion:*' menu select
-setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]} r:|[_-]=** r:|=** l:|=*'

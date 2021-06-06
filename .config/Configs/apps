@@ -1,5 +1,4 @@
 neovim
-broot
 ripgrep
 reflector
 rp-ppoe
@@ -19,7 +18,6 @@ dialog
 ibus
 redshift
 rofi
-tldr
 pulseaudio
 flameshot
 file-roller
@@ -32,8 +30,8 @@ nethogs
 bat
 fd
 fzf
-fish
 gpicview
 xorg-xev
 xorg-xinput
 xorg-xmodmap
+peek

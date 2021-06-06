@@ -1,7 +1,16 @@
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -v '^e' edit-command-line
+
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+bindkey -v '^[k' kill-whole-line
+bindkey -v '^k' kill-line
 
 bindkey -a '^[^[' vi-insert
+
 
 typeset -g -A key
 
@@ -17,22 +26,24 @@ key[Right]="${terminfo[kcuf1]}"
 key[PageUp]="${terminfo[kpp]}"
 key[PageDown]="${terminfo[knp]}"
 key[Shift-Tab]="${terminfo[kcbt]}"
-# #setup key accordingly
-bindkey -- "${key[Home]}"       beginning-of-line
-bindkey -- "${key[End]}"        end-of-line
-bindkey -- "${key[Insert]}"     overwrite-mode
-bindkey -- "${key[Backspace]}"  backward-delete-char
-bindkey -- "${key[Delete]}"     delete-char
-bindkey -- "${key[Up]}"         up-line-or-history
-bindkey -- "${key[Down]}"       down-line-or-history
-bindkey -- "${key[Left]}"       backward-char
-bindkey -- "${key[Right]}"      forward-char
-bindkey -- "${key[PageUp]}"     beginning-of-buffer-or-history
-bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
+# key[Control-Left]="${terminfo[kLFT5]}"
+# key[Control-Right]="${terminfo[kRIT5]}"
+
+bindkey -v "${key[Home]}"       beginning-of-line
+bindkey -v "${key[End]}"        end-of-line
+bindkey -v "${key[Insert]}"     overwrite-mode
+bindkey -v "${key[Backspace]}"  backward-delete-char
+bindkey -v "${key[Delete]}"     delete-char
+bindkey -- "${key[Up]}"         history-beginning-search-backward-end
+bindkey -- "${key[Down]}"       history-beginning-search-forward-end
+# bindkey -- "${key[Left]}"       backward-char
+# bindkey -- "${key[Right]}"      forward-char
+# bindkey -- "${key[PageUp]}"     beginning-of-buffer-or-history
+# bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
 bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
 
-# #Finally, make sure the terminal is in application mode, when zle is
-# #active. Only then are the values from $terminfo valid.
+# Finally, make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	autoload -Uz add-zle-hook-widget
 	function zle_application_mode_start { echoti smkx }
@@ -41,18 +52,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-# #Hist Search
-# autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-# zle -N up-line-or-beginning-search
-# zle -N down-line-or-beginning-search
-# 
-# [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
-# [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
-# 
 #Control-L/R to move between words
-key[Control-Left]="${terminfo[kLFT5]}"
-key[Control-Right]="${terminfo[kRIT5]}"
 
-[[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
-[[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
-
+bindkey '^[[1;5D'  backward-word
+bindkey '^[[1;5C' forward-word

@@ -1,4 +1,4 @@
-set -x ZLUA_SCRIPT "/home/fahim/.config/z.lua/z.lua"
+set -x ZLUA_SCRIPT "$HOME/build/z.lua/z.lua"
 set -x ZLUA_LUAEXE "/usr/bin/lua"
 function _zlua
 	set -l arg_mode ""

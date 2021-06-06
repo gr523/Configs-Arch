@@ -5,16 +5,20 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'gruvbox-community/gruvbox'
     Plug 'patstockwell/vim-monokai-tasty'
     Plug 'szw/vim-maximizer'
+"     Plug 'octol/vim-cpp-enhanced-highlight'
 "     Plug 'puremourning/vimspector'
 call plug#end()
 
 let g:codesdir=$HOME . "/Codes/X"
+filetype off
+filetype plugin indent on
 
 "Colors for nonprogramming or config files
+syn keyword cppType string
+colo gruvbox
 let ftToIgnore = ['cpp', 'python']
 autocmd VimEnter * if index(ftToIgnore, &ft) < 0  | call Defaultcolor()
 
-colo gruvbox
 hi CursorLineNr guibg=none
 hi VertSplit cterm=none gui=none guibg=none
 hi Search guibg=none guifg=#8d93a1 gui=underline
@@ -49,6 +53,7 @@ set smartindent
 
 set splitbelow splitright
 set noequalalways
+set shell=zsh
 
 " autoreload file if its changed
 autocmd Focusgained * checktime
@@ -66,6 +71,7 @@ vmap <C-x> <C-c>gvd
 
 let mapleader=','
 tnoremap <Leader><Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
 
 "move between windows
 map <C-l> <C-w>l
@@ -90,19 +96,29 @@ vnoremap <C-A-k> :m '<-2<CR>gv=gv
 let &winminwidth=0
 let &winminheight=0
 
+let g:MainWindowSize = 76
+
 fu Ftog()
-    if winwidth(0) > 76
-        vert res 76
+    if winwidth(0) > g:MainWindowSize
+        exe "vert res" . g:MainWindowSize  | hi VertSplit guifg=#444444
     else
-        vert res 200
+        vert res 200 | hi VertSplit guifg=bg
     endif
 endfu
+hi VertSplit guifg=bg
 
-map <silent> <A-\> :MaximizerToggle <CR>
+map <silent> <A-f> :MaximizerToggle <CR>
+map <silent> <A-\> :call Ftog()<CR>
 
 
-snoremap ;; <Esc>o
+snoremap ;; <C-j>
 
 map <silent> <F5> :exe "set ft=".&ft <CR>
 
 map<silent> <Leader>ii gg=G<C-o>
+
+fu! SetIO()
+    exe ":vs".g:codesdir."/Input.txt"|exe ":sp".g:codesdir."/Output.txt"
+endfu
+
+map <silent> <Leader>io :call SetIO()<CR><C-h><A-\>

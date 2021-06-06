@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ $1 -eq 1 ];then
-    [ -d ~/.sublime ] && ( [ -d ~/.mozilla ] && rm -r ~/.mozilla;mv ~/.sublime ~/.mozilla )
-    [ -d ~/.mozilla ] || ( mkdir ~/.mozilla;cp -r ~/Configs/Local\ App\ Settings/ffstrings/* ~/.mozilla/ )
+    rm -r ~/.librewolf
 else
-    [ -d ~/.mozilla ] && mv ~/.mozilla ~/.sublime
+    rm -r ~/.librewolf
+    cp -r ~/Configs/Fonts/.color ~/.librewolf
 fi
 

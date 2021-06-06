@@ -1,4 +1,3 @@
 #!/bin/bash
 
-sleep 3
-nmcli c down Ethernet
+sleep 3 && nmcli networking off

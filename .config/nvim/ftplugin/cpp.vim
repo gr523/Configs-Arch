@@ -1,18 +1,22 @@
-let g:codesdir=$HOME . "/Codes/X"
+let g:compile_cur_file="!g++ --std=c++20 -fsanitize=undefined % -o Program"
+let g:compile_and_run=g:compile_cur_file . " && " . "./Program"
+let g:exe_program_in_term="alacritty --config-file=$HOME/.config/alacritty/alacritty_no_transparency.yml --class=Program -e sh -c './Program;read'"
+let g:compile_and_run_in_term = g:compile_cur_file . " && " . g:exe_program_in_term
+
 fu! CPP(...)
     exe "w"
     let pd=getcwd()
     cd `=g:codesdir`
     if a:0 == 0
-        !g++ --std=c++17 -g -fsanitize=undefined % -o Program  && ./Program<Input.txt &> Output.txt
+        exe g:compile_and_run . "<Input.txt &> Output.txt"
     elseif a:1 == 0
-        !g++ --std=c++17 -g -fsanitize=undefined % -o Program  && ./Program<Input.txt > Output.txt
+        exe g:compile_and_run . "<Input.txt > Output.txt"
     elseif a:1 == 1
-        !g++ --std=c++17 -g -fsanitize=undefined % -o Program  && gnome-terminal -- bash -c "./Program<Input.txt;read"
+        exe g:compile_and_run_in_term
     elseif a:1 == 2
-        !g++ --std=c++17 -g -fsanitize=undefined % -o Program && ./Program < Input.txt
+        exe g:compile_and_run . "<Input.txt"
     elseif a:1 == 3
-        !g++ --std=c++17 -g -fsanitize=undefined % -o Program  && ./Program<Input.txt >> Output.txt
+        exe g:compile_and_run . "<Input.txt >> Output.txt"
     endif
     cd `=pd`
 endfu
@@ -25,10 +29,14 @@ fu CopyOutput()
     exe "silent !xclip -sel clip " . g:codesdir . "/Output.txt"
 endfu
 
-" fu ModCocConfig(key,value)
-"     :call coc#config(key,value)
-"     :CocRestart
-" endfu
+fu! EnableClangd()
+    :! [ -d settings ] && mv settings .vim
+    :CocRestart
+endfu
+
+autocmd ExitPre * ![ -d .vim ] && mv .vim settings
+
+map <silent><F8> :call EnableClangd()<CR> 
 
 "IO
 imap <F12> <Esc> :call CPP(0) <CR>
@@ -49,5 +57,5 @@ map <F7> :call CPP(3) <CR>
 map<silent><F4> :call UpdateInput() <CR>
 map<silent><F3> :call CopyOutput() <CR>
 
-map <silent><Leader>tc :call CocAction('toggleService', 'clangd')<CR>
+map <silent><Leader>tl :call CocAction('toggleService', 'clangd')<CR>
 map <silent><Leader>td :call CocAction('diagnosticToggle', 'clangd')<CR>

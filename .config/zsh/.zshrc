@@ -7,8 +7,11 @@
 
 # Lines configured by zsh-newuser-install
 HISTFILE="$HOME/.local/share/zsh/history"
-HISTSIZE=500
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
+setopt HIST_IGNORE_ALL_DUPS
+
+
 setopt extendedglob correct
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -58,3 +61,5 @@ rehash_precmd() {
 add-zsh-hook -Uz precmd rehash_precmd
 
 source $ZDOTDIR/sources
+
+source /home/fahim/.config/broot/launcher/bash/br
