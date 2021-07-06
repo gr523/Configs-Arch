@@ -1,6 +1,8 @@
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;mupdf.desktop;
 image/jpeg=gpicview.desktop;
+text/plain=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop;
+application/octet-stream=org.gnome.FileRoller.desktop;
 
 [Default Applications]
 image/png=gpicview.desktop
@@ -8,3 +10,4 @@ image/jpeg=gpicview.desktop
 inode/directory=pcmanfm.desktop
 x-scheme-handler/ferdi=ferdi.desktop
 application/pdf=org.gnome.Evince.desktop
+text/plain=appimagekit_ec3f67eeed300f4441db38069dbe72f4-Neovim.desktop

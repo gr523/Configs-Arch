@@ -5,6 +5,5 @@ file:///home/fahim/Codes Codes
 file:///usr/share/applications applications
 file:///home/fahim/Temp Temp
 file:///home/fahim/Class/Temp Temp_IUT
-ftp://pc@192.168.0.102:1234/device/Documents/IUT/Temp Temp_IUT_X2
-ftp://pc@192.168.0.102:1234/device/Documents/IUT RealmeX2_IUT
-ftp://pc@192.168.0.102:1234/ RealmeX2
+file:///home/fahim/Documents/Backup Backup
+ftp://192.168.0.102:8573/ RealmeX2

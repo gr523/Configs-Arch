@@ -1,4 +1,4 @@
-let g:compile_cur_file="!g++ --std=c++20 -fsanitize=undefined % -o Program"
+let g:compile_cur_file="!g++ --std=c++20 -fsanitize=undefined \"%\" -o Program"
 let g:compile_and_run=g:compile_cur_file . " && " . "./Program"
 let g:exe_program_in_term="alacritty --config-file=$HOME/.config/alacritty/alacritty_no_transparency.yml --class=Program -e sh -c './Program;read'"
 let g:compile_and_run_in_term = g:compile_cur_file . " && " . g:exe_program_in_term

@@ -41,9 +41,9 @@ alias Psy="sudo pacman -Syyu"
 # - #
 
 # pdf #
-alias cpdf="gs -q -sDEVICE=pdfwrite -sOUTPUTFILE=out.pdf"
-alias opdf="gs -q -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDetectDuplicateImages -dCompressFonts=true -r150 -o output.pdf"
-alias spdf="gs -q -sDEVICE=pdfwrite -dFirstPage=1 -dLastPage=1 -o output.pdf"
+alias cpdf="gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=out.pdf -dBATCH"
+alias opdf="gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDetectDuplicateImages -dCompressFonts=true -r150 -o output.pdf"
+alias spdf="gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dFirstPage=1 -dLastPage=1 -sOUTPUTFILE=output.pdf"
 # - #
 
 alias uMirrors="reflector --fastest 10 --sort rate --verbose --ipv4 --protocol https,http --country Bangladesh,India,US,Singapore > mirrorlist"
@@ -51,3 +51,5 @@ alias uMirrors="reflector --fastest 10 --sort rate --verbose --ipv4 --protocol h
 
 # z.lua #
 alias zh="z -I -t ."
+
+alias ydl="youtube-dl -f 22"
